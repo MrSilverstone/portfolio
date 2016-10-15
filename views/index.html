@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% for project in projects %}
+<section class="work">
+  <figure class="illustration">
+    <a onclick="showProject('{{ project._id.toString() }}')">
+      <img src="images/image1.jpg" alt=""/>
+      <dl>
+        <dt>Name</dt>
+        <dd>{{ project.name }}</dd>
+        <dt>Company</dt>
+        <dd>{{ project.company }}</dd>
+      </dl>
+    </a>
+  </figure>
+</section>
+{% endfor %}
+<div id="project_background" class="overlay-hidden">
+    <div class="project-detail">
+	<button onclick="hideProject()">Close</button>
+    </div>
+</div>
+{% endblock %}
+</section>

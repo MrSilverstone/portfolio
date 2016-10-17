@@ -24,6 +24,7 @@ function showProject(id) {
     $.getJSON("http://137.74.161.134:3000/project/" + id)
      .done(function(project) {
 	 console.log(project);
+	$("#full-image").attr('src','images/image1.jpg');
      });
 }
 

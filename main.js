@@ -19,7 +19,6 @@ app.use(json());
 app.use(route.get('/', routes.index));
 app.use(route.get('/project/:id', routes.show));
 
-
 // Create HTTP Server
 http.createServer(app.callback()).listen(3000);
 console.log('Server listening on port 3000');

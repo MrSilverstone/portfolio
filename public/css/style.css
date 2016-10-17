@@ -23,10 +23,15 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	background: url('../images/bg.gif');
+	background-color: rgb(242, 242, 242);
 	padding: 0;
 	margin: 0;
 	border-top: 10px solid #9d2e2c;
+}
+
+#banner-sketch {
+    position: absolute;
+    z-index: -1;
 }
 
 .container {
@@ -307,4 +312,28 @@ nav ul li:last-child:after {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+footer {
+    margin : 0 auto;
+}
+
+.project-detail {
+    width: 50%;
+    height:50%;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: #ffffff;
+}
+
+.project-detail button {
+    position: absolute;
+}
+
+.project-detail img {
+    float: left;
+    width: 400px;
+    height: 400px;
+    right: 20px;
 }

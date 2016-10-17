@@ -1,5 +1,5 @@
 /* Small viewports — Old monitors, netbooks, tablets (landscape), etc. */
- 
+
 @media only screen and (max-width: 965px) {
     .container {
         width: 840px;
@@ -11,7 +11,7 @@
 }
 
 /* Smaller viewports — more tablets, old monitors */
- 
+
 @media only screen and (max-width: 860px) {
     .container {
         width: 720px;
@@ -21,9 +21,9 @@
         height: 170px;
     }
 }
-
+*/
 /* Even smaller viewports — more tablets, etc. */
- 
+/* 
 @media only screen and (max-width: 740px) {
     .container {
         width: 600px;
@@ -36,9 +36,9 @@
         opacity: 0.5;
     }
 }
-
+*/
 /* Mobile phones (Landscape) and Tablets (Portrait) */
- 
+/* 
 @media only screen and (max-width: 610px) {
     .container {
         width: 460px;
@@ -72,3 +72,4 @@
         margin: 20px 60px;
     }
 }
+

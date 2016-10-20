@@ -21,9 +21,9 @@
         height: 170px;
     }
 }
-*/
+
 /* Even smaller viewports — more tablets, etc. */
-/* 
+
 @media only screen and (max-width: 740px) {
     .container {
         width: 600px;
@@ -36,9 +36,9 @@
         opacity: 0.5;
     }
 }
-*/
+
 /* Mobile phones (Landscape) and Tablets (Portrait) */
-/* 
+
 @media only screen and (max-width: 610px) {
     .container {
         width: 460px;
@@ -70,6 +70,10 @@
         width: 200px;
         height: 200px;
         margin: 20px 60px;
+    }
+
+    header {
+	font-size: 100%;
     }
 }
 

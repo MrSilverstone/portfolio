@@ -14,7 +14,7 @@ void setup()
 {
     size($(window).width(), 300);
     console.log("test");
-    distance = $(window).width() / 25;
+    distance = $(window).width() / 15;
 
     smooth();
     poop = new ArrayList();

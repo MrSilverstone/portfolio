@@ -17,8 +17,8 @@ app.use(json());
 
 // Route middleware
 app.use(route.get('/', routes.index));
-app.use(route.get('/project/:id', routes.show));
+app.use(route.get('/project/:id', routes.project));
 
 // Create HTTP Server
-http.createServer(app.callback()).listen(3000);
-console.log('Server listening on port 3000');
+http.createServer(app.callback()).listen(8080);
+console.log('Server listening on port 8080');

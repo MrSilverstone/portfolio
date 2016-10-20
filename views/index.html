@@ -1,11 +1,38 @@
 {% extends 'layout.html' %}
 
+{% block scripts %}
+<script type="text/javascript" src="/js/typed.min.js"></script>
+<script type="text/javascript" src="/js/processing.min.js"></script>
+<script src="/js/js.js"></script>
+{% endblock %}
+
+{% block banner %}
+<canvas id="banner-sketch" data-processing-sources="/sketch/banner.pde"></canvas>
+{% endblock %}
+
+{% block header %}
+<h1 class="title">Louis Mondesir</h1>
+<div class="typed"></div>
+{% endblock %}
+
 {% block content %}
+<nav>
+    <ul>
+	<li id="all">All</li>
+	<li id="Unity">Unity3d</li>
+	<li id="Android">Android</li>
+	<li id="c-sharp">C++</li>
+	<li id="C#">C#</li>
+	<li id="3ds">3d Modeling</li>
+    </ul>
+</nav>      
+
+
 {% for project in projects %}
 <section class="work">
-  <figure class="illustration">
-    <a onclick="showProject('{{ project._id.toString() }}')">
-      <img src="images/image1.jpg" alt=""/>
+  <figure class="{{ project.techno }}">
+    <a href="project/{{ project._id.toString() }}">
+      <img src="{{ project.imgPreview }}" alt="{{ project.name }}"/>
       <dl>
         <dt>Name</dt>
         <dd>{{ project.name }}</dd>
@@ -16,11 +43,4 @@
   </figure>
 </section>
 {% endfor %}
-<div id="project_background" class="overlay-hidden">
-    <div class="project-detail">
-	<button onclick="hideProject()">Close</button>
-	<image id="full-image"/>
-    </div>
-</div>
 {% endblock %}
-</section>

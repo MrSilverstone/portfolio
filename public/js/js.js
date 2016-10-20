@@ -19,19 +19,6 @@ function show(category) {
     } 
 }
 
-function showProject(id) {
-    $("#project_background").removeClass('overlay-hidden').addClass('overlay-visible');
-    $.getJSON("http://137.74.161.134:3000/project/" + id)
-     .done(function(project) {
-	 console.log(project);
-	$("#full-image").attr('src','images/image1.jpg');
-     });
-}
-
-function hideProject() {
-	$("#project_background").removeClass('overlay-visible').addClass('overlay-hidden');
-}
-
 $(document).ready(function(){
  
  	console.log("hellow!");

@@ -2,43 +2,32 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Louis Mondesir</title>
     <!--	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"> -->
-    <link rel="stylesheet" href="css/style.css" media="screen">
-    <link rel="stylesheet" href="css/media-queries.css" media="screen">
+    <link rel="stylesheet" href="/css/style.css" media="screen">
+    <link rel="stylesheet" href="/css/media-queries.css" media="screen">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/typed.min.js"></script>
-    <script type="text/javascript" src="js/processing.min.js"></script>
-    <script src="js/js.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
     <![endif]-->
+    {% block scripts %}
+    {% endblock %}
   </head>
-
   <body>
-      <canvas id="banner-sketch" data-processing-sources="sketch/banner.pde"></canvas>
-      <div class="container">
+      {% block banner %}
+      {% endblock %}
+      <div class="container">	  
 	  <header>
-              <h1 class="title">Louis Mondesir</h1>
-              <div class="typed"></div>
+	      {% block header %}
+	      {% endblock %}
 	  </header>
-	  <nav>
-              <ul>
-		  <li id="all">All</li>
-		  <li id="web">Unity3d</li>
-		  <li id="illustration">Android</li>
-		  <li id="logo">C++</li>
-		  <li id="logo">C#</li>
-		  <li id="3ds">3d Modeling</li>
-              </ul>
-	  </nav>      
 	  {% block content %}
 	  <p>Missing content!</p>
 	  {% endblock %}
 	  <footer>
 	      <hr>
-	      &copy; 2016 Louis Mondesir. No this is not a wordpress.
+	      &copy; 2016 Louis Mondesir. Website under construction.
 	  </footer>      
   </body>
 </html>

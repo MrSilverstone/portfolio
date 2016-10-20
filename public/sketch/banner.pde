@@ -2,10 +2,18 @@ ArrayList poop;
 int distance;
 
 $(window).resize(function() {
-    console.log("la");
+    if (width == $(window).width())
+	return ;
+    
     size($(window).width(), 300);
-    distance = $(window).width() / 25;
-//    $("#banner-sketch").getContext("2d").scale($(window).width(), 300);
+    distance = $(window).width() / 15;
+    
+    poop.clear();
+    for (int i=0;i<50;i++)
+    {
+	Particle P = new Particle();
+	poop.add(P);
+    }
 });
 
 
@@ -13,16 +21,15 @@ $(window).resize(function() {
 void setup()
 {
     size($(window).width(), 300);
-    console.log("test");
     distance = $(window).width() / 15;
-
+    
     smooth();
     poop = new ArrayList();
-    for (int i=0;i<100;i++)
-	{
-	    Particle P = new Particle();
-	    poop.add(P);
-	}
+    for (int i=0;i<50;i++)
+    {
+	Particle P = new Particle();
+	poop.add(P);
+    }
 }
 
 void draw()
@@ -68,9 +75,19 @@ class Particle
     color c;
     float i = random(-1, 1);
     float j = random(-1, 1);
-    
+     
     Particle( )
     {
+	while (i == (float)0)
+	{
+	    i = random(-1, 1);
+	}
+	
+	while (j == (float)0)
+	{
+	    j = random(-1, 1);
+	}
+	
 	x = random(0, width);
 	y = random(0, height);
 	r = random(1,5);

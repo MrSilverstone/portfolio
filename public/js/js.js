@@ -20,8 +20,6 @@ function show(category) {
 }
 
 $(document).ready(function(){
- 
- 	console.log("hellow!");
     $('#all').addClass('current-li');
  
     $("nav > ul > li").click(function(){

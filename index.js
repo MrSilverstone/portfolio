@@ -18,7 +18,9 @@ app.use(json());
 // Route middleware
 app.use(route.get('/', routes.index));
 app.use(route.get('/project/:id', routes.project));
+app.use(route.get('/santa', routes.santa));
+app.use(route.post('/santa/register', routes.addUser));
 
 // Create HTTP Server
-http.createServer(app.callback()).listen(80);
-console.log('Server listening on port 80');
+http.createServer(app.callback()).listen(8080);
+console.log('Server listening on port 8080');

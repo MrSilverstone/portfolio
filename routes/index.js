@@ -15,3 +15,13 @@ exports.project = function *(id) {
 	this.body = yield render('project', {project : result});
     }
 };
+
+exports.santa = function *() {
+  this.body = yield render('santa');
+}
+
+exports.addUser = function *() {
+  var toto = yield parse(this);
+  console.log(toto);
+  this.redirect('/santa');
+}

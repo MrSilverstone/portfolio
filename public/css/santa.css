@@ -1,0 +1,97 @@
+body {
+  background: #f14040;
+}
+
+h1 {
+  display: table;
+  margin: 40px auto;
+  color: #fff;
+  font: 20px Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+form {
+  display: table;
+  margin: 40px auto;
+}
+form label {
+  position: relative;
+  display: block;
+}
+form label input {
+  font: 18px Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+form label input::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: #999;
+  font: 18px Helvetica, Arial, sans-serif;
+}
+form label input:focus, form label input.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+form label input:focus::placeholder, form label input.populated::placeholder {
+  color: transparent;
+}
+form label input:focus + span, form label input.populated + span {
+  opacity: 1;
+  top: 10px;
+}
+form label span {
+  color: #35dc9b;
+  font: 13px Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+form input[type="submit"] {
+  transition: all 0.2s ease-in-out;
+  font: 18px Helvetica, Arial, sans-serif;
+  border: none;
+  background: #ff0000;
+  color: #fff;
+  padding: 16px 40px;
+}
+form input[type="submit"]:hover {
+  background: #aa0000;
+}
+
+.register-form {
+  width:300px;
+	height:200px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-100px 0 0 -150px;
+}
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
+}

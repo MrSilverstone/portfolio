@@ -20,5 +20,5 @@ app.use(route.get('/', routes.index));
 app.use(route.get('/project/:id', routes.project));
 
 // Create HTTP Server
-http.createServer(app.callback()).listen(8080);
-console.log('Server listening on port 8080');
+http.createServer(app.callback()).listen(80);
+console.log('Server listening on port 80');
